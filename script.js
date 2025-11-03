@@ -9,11 +9,10 @@ const cars = [
   { name: "MG Hector", price: 2800, image: "images/hector.jpg" }
 ];
 
-window.onload = function() {
+window.onload = function () {
   const carsList = document.getElementById("carsList");
   const carSelect = document.getElementById("carSelect");
 
-  
   if (carsList) {
     carsList.innerHTML = "";
     cars.forEach(car => {
@@ -28,7 +27,6 @@ window.onload = function() {
     });
   }
 
-  //  dropdown 
   if (carSelect) {
     carSelect.innerHTML = "";
     cars.forEach(car => {

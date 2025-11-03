@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking | DriveEase Car Rental</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🚗 DriveEase Car Rental</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cars.html">Cars</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="booking-section">
+    <div class="booking-container">
+      <h2>Book Your Car</h2>
+      <form class="booking-form">
+        <div class="form-group">
+          <label for="carSelect">Select Car:</label>
+          <select id="carSelect" required></select>
+        </div>
+
+        <div class="form-group">
+          <label for="days">Number of Days:</label>
+          <input type="number" id="days" name="days" min="1" value="1" required />
+        </div>
+
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" required />
+        </div>
+
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 DriveEase Car Rental</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

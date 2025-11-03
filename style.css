@@ -1,3 +1,4 @@
+/* ---------- General Styles ---------- */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -25,13 +26,13 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section (no background image) */
+/* ---------- Hero Section ---------- */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 60vh;
-  background: #f0f0f0; /* light gray background */
+  background: #f0f0f0;
   border-radius: 16px;
   margin-bottom: 30px;
   text-align: center;
@@ -66,22 +67,13 @@ nav a:hover {
   background-color: #ff1a1a;
 }
 
-
-.btn {
-  margin-top: 20px;
-  background: #ffcc00;
-  color: #003366;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+/* ---------- Cars Page ---------- */
 .cars-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 .car {
@@ -89,23 +81,37 @@ nav a:hover {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.car:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .car img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  height: 180px;
+  object-fit: contain;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.booking {
-  max-width: 500px;
-  margin: 2rem auto;
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.car h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #003366;
 }
-/* Full Booking Page Background */
+
+.car p {
+  color: #444;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* ---------- Booking Page ---------- */
 .booking-section {
   min-height: 100vh;
   display: flex;
@@ -115,7 +121,6 @@ nav a:hover {
   padding: 40px;
 }
 
-/* Booking Form Box */
 .booking-container {
   background: #ffffff;
   padding: 40px 35px;
@@ -133,7 +138,6 @@ nav a:hover {
   font-size: 1.8rem;
 }
 
-/* Form Layout */
 .booking-form {
   display: flex;
   flex-direction: column;
@@ -167,7 +171,6 @@ select:focus {
   outline: none;
 }
 
-/* Button */
 button.btn {
   background-color: #ff4d4d;
   color: white;
@@ -183,18 +186,7 @@ button.btn:hover {
   background-color: #ff1a1a;
 }
 
-/* Fade-in Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Contact Page Background */
+/* ---------- Contact Page ---------- */
 .contact-section {
   min-height: 100vh;
   display: flex;
@@ -204,7 +196,6 @@ button.btn:hover {
   padding: 40px;
 }
 
-/* Contact Form Box */
 .contact-container {
   background: #ffffff;
   padding: 40px 35px;
@@ -229,7 +220,6 @@ button.btn:hover {
   line-height: 1.4;
 }
 
-/* Contact Form Styling */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -263,7 +253,6 @@ button.btn:hover {
   outline: none;
 }
 
-/* Button */
 .contact-form .btn {
   background-color: #0077cc;
   color: white;
@@ -279,7 +268,7 @@ button.btn:hover {
   background-color: #005fa3;
 }
 
-/* Reuse same fade-in animation */
+/* ---------- Animation ---------- */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -291,47 +280,7 @@ button.btn:hover {
   }
 }
 
-.cars-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.car-card {
-  width: 220px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 10px;
-  transition: transform 0.2s ease;
-}
-
-.car-card:hover {
-  transform: scale(1.05);
-}
-
-.car-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.car-card h3 {
-  margin: 10px 0 5px;
-  font-size: 18px;
-}
-
-.car-card p {
-  color: #333;
-  font-weight: bold;
-}
-
-
+/* ---------- Footer ---------- */
 footer {
   background: #003366;
   color: white;

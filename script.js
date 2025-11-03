@@ -1,31 +1,36 @@
 window.onload = function () {
   var carsList = document.getElementById("carsList");
+  var carSelect = document.getElementById("carSelect");
 
-  // Simple static data for demo (no backend needed)
   var cars = [
-    { name: "Maruti Swift", price: 1500, image: "https://via.placeholder.com/200x120?text=Swift" },
-    { name: "Hyundai i20", price: 1800, image: "https://via.placeholder.com/200x120?text=i20" },
-    { name: "Tata Nexon", price: 2500, image: "https://via.placeholder.com/200x120?text=Nexon" },
-    { name: "Toyota Innova", price: 3000, image: "https://via.placeholder.com/200x120?text=Innova" },
-    { name: "Honda City", price: 2800, image: "https://via.placeholder.com/200x120?text=City" }
+    { name: "Toyota Innova", price: 4000, image: "https://via.placeholder.com/200?text=Innova" },
+    { name: "Hyundai i20", price: 2500, image: "https://via.placeholder.com/200?text=i20" },
+    { name: "Swift Dzire", price: 2200, image: "https://via.placeholder.com/200?text=Swift" },
+    { name: "Honda City", price: 3500, image: "https://via.placeholder.com/200?text=Honda+City" },
+    { name: "Mahindra XUV700", price: 5000, image: "https://via.placeholder.com/200?text=XUV700" }
   ];
 
-  carsList.innerHTML = "";
-  cars.forEach(function (car) {
-    var card = document.createElement("div");
-    card.className = "car";
-    card.style.border = "1px solid #ccc";
-    card.style.margin = "10px";
-    card.style.padding = "10px";
-    card.style.width = "220px";
-    card.style.display = "inline-block";
-    card.style.textAlign = "center";
-    card.innerHTML = `
-      <img src="${car.image}" width="200"><br>
-      <b>${car.name}</b><br>
-      Price: ₹${car.price}/day<br><br>
-      <button onclick="alert('Booking ${car.name}!')">Book Now</button>
-    `;
-    carsList.appendChild(card);
-  });
+  if (carsList) {
+    carsList.innerHTML = "";
+    for (var i = 0; i < cars.length; i++) {
+      var car = cars[i];
+      var card = document.createElement("div");
+      card.className = "car";
+      card.innerHTML =
+        "<img src='" + car.image + "' width='200'><br>" +
+        "<b>" + car.name + "</b><br>" +
+        "Price: ₹" + car.price + "/day<br><br>";
+      carsList.appendChild(card);
+    }
+  }
+
+  if (carSelect) {
+    carSelect.innerHTML = "";
+    for (var j = 0; j < cars.length; j++) {
+      var option = document.createElement("option");
+      option.value = cars[j].name;
+      option.textContent = cars[j].name;
+      carSelect.appendChild(option);
+    }
+  }
 };

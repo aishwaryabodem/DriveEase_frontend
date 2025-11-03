@@ -9,13 +9,11 @@ const cars = [
   { name: "MG Hector", price: 2800, image: "images/hector.jpg" }
 ];
 
-
 window.onload = function () {
   const carsList = document.getElementById("carsList");
   const carSelect = document.getElementById("carSelect");
 
   if (carsList) {
-    carsList.innerHTML = "";
     cars.forEach(car => {
       const div = document.createElement("div");
       div.className = "car-card";
@@ -29,7 +27,6 @@ window.onload = function () {
   }
 
   if (carSelect) {
-    carSelect.innerHTML = "";
     cars.forEach(car => {
       const option = document.createElement("option");
       option.value = car.name;

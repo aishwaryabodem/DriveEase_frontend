@@ -9,6 +9,7 @@ const cars = [
   { name: "MG Hector", price: 2800, image: "images/hector.jpg" }
 ];
 
+
 window.onload = function () {
   const carsList = document.getElementById("carsList");
   const carSelect = document.getElementById("carSelect");

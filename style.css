@@ -279,26 +279,6 @@ button.btn:hover {
   background-color: #005fa3;
 }
 
-/* Reuse same fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-footer {
-  background: #003366;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-/* Cars Page Layout */
 .cars-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -334,4 +314,25 @@ footer {
 .car-card p {
   color: #555;
   font-weight: bold;
+}
+
+
+/* Reuse same fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }

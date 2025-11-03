@@ -279,44 +279,6 @@ button.btn:hover {
   background-color: #005fa3;
 }
 
-.cars-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-/* Each Car Card */
-.car-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background: white;
-}
-
-/* Car Images */
-.car-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* Car Titles and Price */
-.car-card h3 {
-  margin: 10px 0 5px;
-  font-size: 18px;
-  color: #333;
-}
-
-.car-card p {
-  color: #555;
-  font-weight: bold;
-}
-
-
 /* Reuse same fade-in animation */
 @keyframes fadeIn {
   from {
@@ -329,6 +291,27 @@ button.btn:hover {
   }
 }
 
+.car-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.car-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
 footer {
   background: #003366;
